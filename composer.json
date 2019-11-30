@@ -1,0 +1,37 @@
+{
+    "name": "dell/books",
+    "description": "Book Store MVC",
+    "type": "project",
+    "keywords": [
+        "books",
+        "php"
+    ],
+    "authors": [
+        {
+            "name": "Hung Pham",
+            "email": "tanhunghue@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "filp/whoops": "^2.2@dev"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "files": [
+            "helper/router.php"
+        ],
+        "classmap": [
+            "app/Application/"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "dev" : "php -S localhost:8000 -t public/"
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}

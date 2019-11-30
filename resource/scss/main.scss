@@ -1,0 +1,54 @@
+@import "home.scss";
+@import "product.scss";
+
+body {
+  .main-content {
+    min-height: 100vh;
+  }
+}
+
+header {
+  background: rgb(24, 158, 255);
+
+  .navbar-main {
+
+    background: rgb(24, 158, 255);
+
+    .search {
+      box-shadow: rgba(98, 98, 98, 0.5) 0px 1px 2px 0px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      button {
+        color: #6c757d !important;
+        background-color: #e0dcd7 !important;
+        border-radius: 0px;
+      }
+      input {
+        width: 70vw;
+        max-width: 400px;
+        border-radius: 0px;
+      }
+    }
+
+    .nav-link, .navbar-brand {
+      color: white;
+      border-radius: 5px;
+      &.has-border {
+        border: 2px solid white;
+      }
+      padding: 4px;
+      .fa {
+        margin-right: 3px;
+      }
+
+    }
+
+    .navbar-brand {
+      font-size: 30px;
+    }
+  }
+}
+
+
+

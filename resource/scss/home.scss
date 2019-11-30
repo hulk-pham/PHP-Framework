@@ -1,0 +1,17 @@
+
+.home {
+  .carousel-item {
+    max-height: 400px;
+    overflow: hidden;
+  }
+  .category{
+    .nav-item{
+      border-bottom: 1px solid aliceblue;
+      font-size: 14px;
+      font-weight: bold;
+      .nav-link{
+        color: #6c757d!important;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.home .carousel-item {
+  max-height: 400px;
+  overflow: hidden; }
+
+.home .category .nav-item {
+  border-bottom: 1px solid aliceblue;
+  font-size: 14px;
+  font-weight: bold; }
+  .home .category .nav-item .nav-link {
+    color: #6c757d !important; }
+
+.list-product .product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 16px;
+  text-decoration: none; }
+  .list-product .product:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+    z-index: 1; }
+  .list-product .product .product-img {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin-bottom: 12px; }
+  .list-product .product .product-title {
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-height: 40px;
+    width: 100%;
+    color: #242424;
+    font-size: 13px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.54;
+    letter-spacing: 0.1px;
+    text-align: left;
+    text-overflow: ellipsis;
+    margin: 0px;
+    overflow: hidden; }
+  .list-product .product .product-price {
+    align-self: stretch;
+    color: #242424;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0px;
+    padding: 8px 0px 0px; }
+    .list-product .product .product-price .percent {
+      margin-left: 8px;
+      color: #787878;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.6; }
+    .list-product .product .product-price .original {
+      display: block;
+      margin-left: 0px;
+      color: #787878;
+      font-size: 13px;
+      font-weight: 300;
+      text-decoration: line-through; }
+
+body .main-content {
+  min-height: 100vh; }
+
+header {
+  background: #189eff; }
+  header .navbar-main {
+    background: #189eff; }
+    header .navbar-main .search {
+      box-shadow: rgba(98, 98, 98, 0.5) 0px 1px 2px 0px;
+      border-radius: 4px;
+      overflow: hidden; }
+      header .navbar-main .search button {
+        color: #6c757d !important;
+        background-color: #e0dcd7 !important;
+        border-radius: 0px; }
+      header .navbar-main .search input {
+        width: 70vw;
+        max-width: 400px;
+        border-radius: 0px; }
+    header .navbar-main .nav-link, header .navbar-main .navbar-brand {
+      color: white;
+      border-radius: 5px;
+      padding: 4px; }
+      header .navbar-main .nav-link.has-border, header .navbar-main .navbar-brand.has-border {
+        border: 2px solid white; }
+      header .navbar-main .nav-link .fa, header .navbar-main .navbar-brand .fa {
+        margin-right: 3px; }
+    header .navbar-main .navbar-brand {
+      font-size: 30px; }
+
