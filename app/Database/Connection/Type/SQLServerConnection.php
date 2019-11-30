@@ -4,9 +4,13 @@ namespace App\Database\Connection\Type;
 
 use App\Interfaces\DBConnection;
 
-class SQLServerConnection extends DBConnection {
+class SQLServerConnection  {
 
-    public function connect($config) {
+    public function connect() {
 
+    }
+
+    public function disconnect() {
+        // TODO: Implement disconnect() method.
     }
 }

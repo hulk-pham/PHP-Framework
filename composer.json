@@ -19,7 +19,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "files": [
-            "helper/router.php"
+            "helper/index.php"
         ],
         "classmap": [
             "app/Application/"

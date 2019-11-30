@@ -9,8 +9,11 @@
 namespace App\Model;
 
 
-use App\Application\Model;
+use App\Interfaces\SimpleModelClass;
 
-class User extends Model {
+class User extends SimpleModelClass {
+
+    protected $hide = ['password'];
+    protected $table_name = 'users';
 
 }

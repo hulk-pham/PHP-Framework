@@ -140,3 +140,23 @@
     line-height: 26px;
     letter-spacing: .5px;
 }
+
+
+.img-avatar-title{
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.post-title-brief{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.short-brief{
+    line-height: 1.5rem;
+    height: 4rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}

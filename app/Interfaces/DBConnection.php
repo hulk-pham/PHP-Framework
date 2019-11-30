@@ -2,7 +2,10 @@
 
 namespace App\Interfaces;
 
-abstract class DBConnection
-{
-  public abstract function connect($config);
+interface DBConnection {
+    static function connect();
+
+    static function disconnect();
+
+    static function getConnect();
 }
