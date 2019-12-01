@@ -44,7 +44,7 @@ ORDER BY post.id ASC ");
 
         try {
             $status = $this->db->exec("
-          INSERT INTO post (brief, content, title, created_at, author_id, category_id, avatar) 
+          INSERT INTO post (brief,  title, content, created_at, author_id, category_id, avatar) 
           VALUES ('{$data['brief']}','{$data['title']}' , '{$data['content']}', current_timestamp(), '{$user_id}',
            '{$data['category']}', '{$data['avatar']}');");
 

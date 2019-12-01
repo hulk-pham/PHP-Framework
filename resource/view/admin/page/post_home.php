@@ -39,10 +39,11 @@
                                     <td><?= $post['author_name'] ?></td>
                                     <td><?= $post['created_at'] ?></td>
                                     <td>
-                                        <a href="/dashboard-view-post/<?= $post['id'] ?>">
+                                        <a href="/post/<?= $post['id'] ?>">
                                             <button><span class="fa fa-eye btn-block"></span></button>
                                         </a>
-                                        <a href="/dashboard/postedit/<?= $post['id'] ?>">
+<!--                                        <a href="/dashboar/--><?//= $post['id'] ?><!--">-->
+                                        <a href="#">
                                             <button><span class="fa fa-pencil text-info btn-block"></span></button>
                                         </a>
 

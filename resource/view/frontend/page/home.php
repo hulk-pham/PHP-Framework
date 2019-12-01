@@ -18,19 +18,19 @@
             <div class="col-12 col-md-6">
                 <div class="post-text">
                     <div class="img-container img-avatar-title">
-                        <img src="<?= asset_url("upload/post/".$post['avatar']) ?>">
+                        <img src="<?= asset_url("upload/post/" . $post['avatar']) ?>">
                     </div>
                     <div class="post-introduce">
                         <div class="post-stats">
-                            <a href="#" class="category">Travel</a>
+                            <a href="#" class="category"><?= $post['cate_name'] ?></a>
                             <!--                            <p class="stat">beautiful</p>-->
                         </div>
                         <h1 class="post-title-brief">
-                            <a href="/post/<?= $post['id'] ?>" class="post-title big"><?=$post['title'] ?></a>
+                            <a href="/post/<?= $post['id'] ?>" class="post-title big"><?= $post['title'] ?></a>
                         </h1>
-                        <p class="post-date">March 26, 2018</p>
+                        <p class="post-date"><?= explode(" ",$post['created_at'])[0] ?></p>
                         <p class="body-text short-brief">
-                           <?=$post['brief'] ?>
+                            <?= $post['brief'] ?>
                         </p>
                         <a href="/post/<?= $post['id'] ?>" class="btn-read-more">Read More</a>
                     </div>

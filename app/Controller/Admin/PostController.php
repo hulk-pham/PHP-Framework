@@ -75,6 +75,7 @@ class PostController extends Controller {
             self::saveNewPost($request);
         } else {
 
+
             $status = $post_model->insert([
                 'avatar' => $file_name,
                 'title' => $request->title,
