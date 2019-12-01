@@ -9,6 +9,8 @@
 namespace App\Model;
 
 
-class Category {
+use App\Interfaces\SimpleModelClass;
 
+class Category extends SimpleModelClass {
+    protected $table_name = 'category';
 }

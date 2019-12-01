@@ -500,7 +500,7 @@ demo = {
         marker.setMap(map);
     },
 
-    showNotification: function(from, align) {
+    showNotification: function(msg, type ,from, align) {
         color = Math.floor((Math.random() * 4) + 1);
 
         $.notify({

@@ -9,6 +9,9 @@
 namespace App\Model;
 
 
-class Tag {
+use App\Interfaces\SimpleModelClass;
 
+class Tag extends SimpleModelClass {
+
+    protected $table_name = 'tag';
 }

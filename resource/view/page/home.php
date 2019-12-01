@@ -6,18 +6,7 @@
 <!--    <p>I'm an instance of <a href="https://ckeditor.com">CKEditor</a>.</p>-->
 <!--</div>-->
 
-<form method="get">
-    <p>
-        My Editor:<br>
-        <textarea name="editor1" id="editor">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
-        <script>
-            CKEDITOR.replace( 'editor1' );
-        </script>
-    </p>
-    <p>
-        <input type="submit">
-    </p>
-</form>
+
 <div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -279,9 +268,3 @@
         </nav>
     </div>
 </footer>
-
-<script src="<?= asset_url("vendor/ckeditor/ckeditor.js") ?>"></script>
-<script src="<?= asset_url("vendor/ckeditor/sample.js") ?>"></script>
-<script>
-    initSample();
-</script>

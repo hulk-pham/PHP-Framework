@@ -16,6 +16,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
 
+    <!--    Lib-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+
+
     <!-- CSS Files -->
     <link href="<?= asset_url("vendor/assets/css/bootstrap.min.css") ?>" rel="stylesheet"/>
     <link href="<?= asset_url("vendor/assets/css/light-bootstrap-dashboard.css?v=2.0.0 ") ?>" rel="stylesheet"/>

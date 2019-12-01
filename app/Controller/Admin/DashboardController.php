@@ -18,6 +18,6 @@ class DashboardController extends Controller {
     const defaultMasterFile = self::listMasterFile['admin'];
 
     public static function index(Request $request) {
-        self::render('page/home.php', ["page" => Session::all()]);
+        self::render('page/home.php');
     }
 }
