@@ -27,4 +27,5 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="<?= asset_url("vendor/assets/css/demo.css") ?>" rel="stylesheet"/>
+    <script src="<?= asset_url("vendor/assets/js/core/jquery.3.2.1.min.js") ?>" type="text/javascript"></script>
 </head>

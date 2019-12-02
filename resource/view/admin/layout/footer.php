@@ -42,7 +42,7 @@ if ($status) {
     $msg = explode("|", $status)[1];
     $msg = 'haha';
 
-    var_dump($type)
+//    var_dump($type)
     ?>
     <script type="text/javascript">
         $(document).ready(function () {

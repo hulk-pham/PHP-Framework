@@ -12,12 +12,16 @@ namespace App\Controller\Admin;
 use App\Application\Request;
 use App\Application\Session;
 use App\Controller\Controller;
+use App\Middleware\RequireLogin;
 
 class DashboardController extends Controller {
 
     const defaultMasterFile = self::listMasterFile['admin'];
-
+    const middleware = [
+        RequireLogin::class
+    ];
     public static function index(Request $request) {
+        self::checkMiddleWare($request);
         self::render('page/home.php');
     }
 }

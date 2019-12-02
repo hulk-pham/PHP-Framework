@@ -9,18 +9,23 @@
 namespace App\Controller\Admin;
 
 
+use App\Application\Auth;
 use App\Application\Request;
 use App\Controller\Controller;
+use App\Middleware\RequireLogin;
 use App\Model\Category;
 use App\Model\Post;
 use App\Model\Tag;
 
 class PostController extends Controller {
     const defaultMasterFile = self::listMasterFile['admin'];
-
+    const middleware = [
+        RequireLogin::class
+    ];
 
     public static function index(Request $request, $status = null) {
 //        dd($request);
+        self::checkMiddleWare($request);
         $post_model = new Post();
         $posts = $post_model->all();
 
@@ -36,6 +41,7 @@ class PostController extends Controller {
 
     public static function formNewPost(Request $request) {
 
+        self::checkMiddleWare($request);
         $cate_model = new Category();
         $tag_model = new Tag();
         $listCate = $cate_model->all();
@@ -48,6 +54,7 @@ class PostController extends Controller {
 
     public static function saveNewPost(Request $request) {
 
+        self::checkMiddleWare($request);
         $post_model = new Post();
 
         $file = $_FILES["avatar"];
@@ -70,7 +77,10 @@ class PostController extends Controller {
             }
         } else  $error = "Expect avatar";
 
-//        dd($error);
+        $user_id = Auth::getUser()['id'];
+//        dd(Auth::getUser());
+        if ($user_id == null) $error = "Need login";
+
         if ($error) {
             self::saveNewPost($request);
         } else {
@@ -83,6 +93,7 @@ class PostController extends Controller {
                 'content' => $request->content,
                 'category' => $request->category,
                 'tag' => $request->tag,
+                'author_id' => $user_id
             ]);
 
 //            dd($status);
@@ -103,6 +114,7 @@ class PostController extends Controller {
     }
 
     public static function deletePost(Request $request) {
+        self::checkMiddleWare($request);
         $id = $request->id;
 
         $post_model = new Post();

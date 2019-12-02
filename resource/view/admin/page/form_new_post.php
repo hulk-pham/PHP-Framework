@@ -69,7 +69,7 @@
                                         <textarea name="content"
                                                   id="editor" required>&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
                                         <script>
-                                            CKEDITOR.replace('content');
+
                                         </script>
                                     </div>
                                 </div>
@@ -87,10 +87,13 @@
 
 <script src="<?= asset_url("vendor/ckeditor/ckeditor.js") ?>"></script>
 <script src="<?= asset_url("vendor/ckeditor/sample.js") ?>"></script>
+<script src="<?= asset_url("vendor/ckfinder/ckfinder.js") ?>"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
 <script>
-    initSample();
+    var editor = CKEDITOR.replace('content');
+    CKFinder.setupCKEditor( editor );
+    // initSample();
     $( document ).ready(function() {
         $('#tag_select').multipleSelect()
     });

@@ -36,16 +36,29 @@ ORDER BY post.id ASC ");
         return $result;
     }
 
+    public function get($id) {
+        if (!isset($this->table_name)) throw new \Error("Expect table name");
+        $stm = $this->db->query("SELECT * FROM " . $this->table_name . " Where id = $id");
+
+        $rows = $stm->fetchAll(\PDO::FETCH_ASSOC);
+
+        $result = null;
+        foreach ($rows as $row) {
+            foreach ($this->hide as $hide) {
+                unset($row[$hide]);
+            }
+            $result = $row;
+            break;
+        }
+
+        return $result;
+    }
+
     public function insert($data) {
-
-//        $user_id = Auth::getUser()['id'];
-        $user_id = '1';
-        if ($user_id == null) return 0;
-
         try {
             $status = $this->db->exec("
           INSERT INTO post (brief,  title, content, created_at, author_id, category_id, avatar) 
-          VALUES ('{$data['brief']}','{$data['title']}' , '{$data['content']}', current_timestamp(), '{$user_id}',
+          VALUES ('{$data['brief']}','{$data['title']}' , '{$data['content']}', current_timestamp(), '{$data['author_id']}',
            '{$data['category']}', '{$data['avatar']}');");
 
             return $status > 0;

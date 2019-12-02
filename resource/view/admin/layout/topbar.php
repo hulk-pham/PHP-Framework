@@ -38,11 +38,11 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#pablo">
-                        <span class="no-icon">Account</span>
-                    </a>
-                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#pablo">-->
+<!--                        <span class="no-icon">Account</span>-->
+<!--                    </a>-->
+<!--                </li>-->
 <!--                <li class="nav-item dropdown">-->
 <!--                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"-->
 <!--                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
@@ -58,9 +58,12 @@
 <!--                    </div>-->
 <!--                </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="#pablo">
+                    <button type="submit" form="logout" class="nav-link btn border-0" href="#pablo">
                         <span class="no-icon">Log out</span>
-                    </a>
+                    </button>
+                    <form class="d-none" id="logout" action="/dashboard-user-logout" method="post">
+
+                    </form>
                 </li>
             </ul>
         </div>

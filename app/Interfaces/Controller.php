@@ -2,10 +2,9 @@
 
 namespace App\Interfaces;
 
-abstract class Controller {
+use App\Application\Request;
 
-    public function __construct() {
-    }
+abstract class Controller {
 
     const viewFileRootFolder = ROOT_DIR . '/resource/view/';
     const defaultMasterFile = 'admin/layout/master.php';
@@ -17,11 +16,17 @@ abstract class Controller {
         if (is_file($absoludePath)) {
 
             self::renderRaw($filePath, $data, $masterFileName);
-
-
         } else throw new \Exception("File " . $absoludePath . " not exist");
     }
 
+    public static function checkMiddleWare(Request $request, $list_middleware = []) {
+        $listMiddleWare = count($list_middleware) ? $list_middleware : static::middleware;
+
+        foreach ($listMiddleWare as $middleware) {
+            $class_intance = new $middleware();
+            $request = $class_intance->handle($request);
+        }
+    }
 
     private static function renderRaw($filePath, $data, $masterFileName = null) {
         extract($data);
@@ -33,11 +38,6 @@ abstract class Controller {
         $_CONTENT = ob_get_clean(); // inject content to master file
 
         ob_clean();
-
-        if (session_status() == PHP_SESSION_NONE) {
-            ob_start();
-            session_start();
-        }
 
         // Include master file
         if ($masterFileName) {

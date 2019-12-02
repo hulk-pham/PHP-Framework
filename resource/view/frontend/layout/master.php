@@ -30,15 +30,15 @@
 
     <?php include_once("header.php") ?>
     <div class="frontend">
-            <!--Content -->
-            <?php
-            echo @$_CONTENT;
-            ?>
-            <!--End Content -->
+        <!--Content -->
+        <?php
+        echo @$_CONTENT;
+        ?>
+        <!--End Content -->
 
     </div>
+<?php include_once("footer.php") ?>
 </div>
-
 </body>
 <!--   Core JS Files   -->
 <script src="<?= asset_url("vendor/assets/js/core/jquery.3.2.1.min.js") ?>" type="text/javascript"></script>

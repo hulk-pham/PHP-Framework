@@ -2,6 +2,9 @@
 
 use App\Controller\Admin\DashboardController;
 use App\Controller\Admin\PostController;
+use App\Controller\Admin\LoginController;
+use App\Controller\Web\NotFoundController;
+use  App\Controller\Admin\MediaController;
 
 $router->get("/dashboard", function ($request) {
     DashboardController::index($request);
@@ -38,18 +41,30 @@ $router->post("/dashboard-delete-post/{id}", function ($request) {
 });
 
 // =========================CATEGORY==================================
-$router->get("/dashboard/category", function ($request) {
-    DashboardController::index($request);
-});
+//$router->get("/dashboard/category", function ($request) {
+//    NotFoundController::index($request);
+//});
 
+
+// =========================MEDIA==================================
+$router->get("/dashboard-media", function ($request) {
+    MediaController::index($request);
+});
 
 // =========================TAG==================================
-$router->get("/dashboard/tag", function ($request) {
-    DashboardController::index($request);
-});
+//$router->get("/dashboard/tag", function ($request) {
+//    NotFoundController::index($request);
+//});
 
 // =========================USER==================================
-$router->get("/dashboard/user", function ($request) {
-    DashboardController::index($request);
+$router->get("/dashboard-user-login", function ($request) {
+    LoginController::formLogic($request);
 });
 
+$router->post("/dashboard-user-login", function ($request) {
+    LoginController::doLogin($request);
+});
+
+$router->post("/dashboard-user-logout", function ($request) {
+    LoginController::doLogout($request);
+});
