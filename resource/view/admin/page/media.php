@@ -6,11 +6,11 @@
 <!-- Latest compiled and minified JavaScript -->
 <script>
     $(document).ready(function () {
-        var config = {};
+        var config = {title: ""};
         CKFinder.config();
-        CKFinder.widget( 'ckfinder-widget', {
+        CKFinder.widget('ckfinder-widget', {
             width: '100%',
             height: 700
-        } );
+        });
     });
 </script>
